@@ -1,7 +1,14 @@
+# Usage
 
-# Simple example
+    pandoc -tjson README.md |./pandoc-gv.py |pandoc -fjson -oREADME.pdf -H header.txt
 
-* Make sure you incude graphicx in your head!
+Where the contents of "header.txt" is
+
+    \usepackage{graphicx}
+
+# Examples
+
+* Make sure you include graphicx in your head!
 
 * Defaults to "dot" layout engine
 
@@ -54,7 +61,7 @@ digraph g {
 
 # Regular code block (uninterpreted by Graphviz)
 
-* The {.dot} param section is required for this to work
+* The {.dot} parameter section is required for this to work
 
 ```
 digraph g {
@@ -66,7 +73,7 @@ digraph g {
 
 # Changing the Layout
 
-* Given an additional .comman passed is interprested as the layout engine
+* Given an optional second "."-command gets interpreted as the layout engine
 
 ~~~~
 ``` {#gv .neato}
