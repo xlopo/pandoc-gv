@@ -22,7 +22,7 @@ Where the contents of "header.txt" is
 
 **Produces**
 
-[Example 1](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_01.png)
+![Example 1](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_01.png)
 
 # "Inline" Code Block
 
@@ -41,7 +41,7 @@ Where the contents of "header.txt" is
 
 **Produces**
 
-[Example 2](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_02.png)
+![Example 2](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_02.png)
 
 
 # Regular code block (uninterpreted by Graphviz)
