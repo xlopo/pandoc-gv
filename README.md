@@ -12,15 +12,13 @@ Where the contents of "header.txt" is
 
 * Defaults to "dot" layout engine
 
-````
-```  {#gv}
-digraph g {
-	A->B;
-	A->C;
-	C->D;
-}
-```
-````
+    ```  {#gv}
+    digraph g {
+        A->B;
+        A->C;
+        C->D;
+    }
+    ```
 
 *Produces*
 
