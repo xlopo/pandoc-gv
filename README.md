@@ -22,7 +22,7 @@ digraph g {
 ```
 ~~~~
 
-\textbf{Produces}
+*Produces*
 
 ![Example 1](https://github.com/lopo/oandoc-gv/raw/master/examples/solarized-yinyang.png)
 
