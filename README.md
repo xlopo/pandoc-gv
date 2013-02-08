@@ -24,7 +24,7 @@ digraph g {
 
 *Produces*
 
-![Example 1](https://github.com/lopo/oandoc-gv/raw/master/examples/solarized-yinyang.png)
+![Example 1](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_01.png)
 
 # "Inline" Code Block
 
