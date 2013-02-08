@@ -24,13 +24,7 @@ digraph g {
 
 \textbf{Produces}
 
-```  {#gv}
-digraph g {
-	A->B;
-	A->C;
-	C->D;
-}
-```
+![Example 1](https://github.com/lopo/oandoc-gv/raw/master/examples/solarized-yinyang.png)
 
 # "Inline" Code Block
 
