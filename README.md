@@ -48,6 +48,7 @@ Where the contents of "header.txt" is
 
 * Without the "{.dot}" parameter section, the text gets rendered as a regular code block
 
+    
     ```
     digraph g {
         A->B;
