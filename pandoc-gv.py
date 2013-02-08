@@ -5,18 +5,24 @@ from subprocess import Popen, PIPE
 
 tmp_dir = tempfile.mkdtemp(prefix=".tmp_delete_me", dir=".")
 
-def process_dot(obj):
+def get_keyval_params(keyval_array):
+    if not keyval_array:
+        return None
 
+    if len(keyval_array) == 0:
+        return None
+
+    # d = 
+
+def process_dot(obj):
     code_key = u"CodeBlock"
     data = obj.get(code_key, None)
 
     if not data:
-        #print ("Not Codeblock: " + str(obj.keys()))
         code_key=u"Code"
         data = obj.get(code_key, None)
 
     if not data:
-        #print ("Not Code: " + str(obj.keys()))
         return obj
 
     code_id = data[0][0]
@@ -35,10 +41,6 @@ def process_dot(obj):
     if layout not in ["dot", "neato", "fdp", "sfdp", "twopi", "circo"]:
         raise(Exception("Unkown layout: \"{}\"".format(layout)))
 
-    #print("==============")
-    #print (text)
-
-
     gv_command = layout
     p = Popen([gv_command, '-Teps'], stdin=PIPE, stdout=PIPE)
     converted_text = p.communicate(input=text.encode())[0].decode()
@@ -52,7 +54,6 @@ def process_dot(obj):
 
     tex_command = u"\includegraphics{%s}" %tmp_filename
     p.wait()
-
 
     new_obj = {u"RawInline": [u"tex", tex_command] }
     if code_key == u"CodeBlock":
