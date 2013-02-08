@@ -20,9 +20,9 @@ Where the contents of "header.txt" is
     }
     ```
 
-*Produces*
+**Produces**
 
-![Example 1](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_01.png)
+[Example 1](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_01.png)
 
 # "Inline" Code Block
 
@@ -30,86 +30,76 @@ Where the contents of "header.txt" is
 
 * Note that the parameters have to be passed at the end in this case
 
-~~~~
-Graph over here -> 
-``` 
-digraph g {
-	A->B;
-	A->C;
-	C->D;
-}
-``` {#gv} $O(n) \text{ include Code section }$
-~~~~
+    Graph over here -> 
+    ``` 
+    digraph g {
+        A->B;
+        A->C;
+        C->D;   
+    }
+    ``` {#gv} $O(n) \text{ include Code section }$
 
-\textbf{Produces}
+**Produces**
 
-``` 
-digraph g {
-	A->B;
-	A->C;
-	C->D;
-}
-``` {#gv} $O(n) \text{ include Code section }$
+[Example 2](https://github.com/xlopo/pandoc-gv/raw/master/examples/example_02.png)
+
 
 # Regular code block (uninterpreted by Graphviz)
 
-* The {.dot} parameter section is required for this to work
+* Without the "{.dot}" parameter section, the text gets rendered as a regular code block
 
-```
-digraph g {
-	A->B;
-	A->C;
-	C->D;
-}
-```
+    ```
+    digraph g {
+        A->B;
+        A->C;
+        C->D;
+    }
+    ```
 
 # Changing the Layout
 
-* Given an optional second "."-command gets interpreted as the layout engine
+* An optional secondondary "."-command gets interpreted as the layout engine
 
-~~~~
-``` {#gv .neato}
-digraph g {
-	A->B;
-	A->C;
-	B->A;
-	C->D;
-}
-```
-~~~~
+
+    ``` {#gv .neato}
+    digraph g {
+        A->B;
+        A->C;
+        B->A;
+        C->D;
+    }
+    ```
 
 \textbf{Produces}
 
 ``` {#gv .neato}
 digraph g {
-	A->B;
-	A->C;
-	B->A;
-	C->D;
+    A->B;
+    A->C;
+    B->A;
+    C->D;
 }
 ```
 
 
-~~~~
-``` {#gv .circo}
-digraph g {
-	A->B;
-	A->C;
-	C->D;
-	C->F;
-	C->G;
-}
-```
-~~~~
+    ``` {#gv .circo}
+    digraph g {
+        A->B;
+        A->C;
+        C->D;
+        C->F;
+        C->G;
+    }
+    ```
 
 \textbf{Produces}
 
 ``` {#gv .circo}
 digraph g {
-	A->B;
-	A->C;
-	C->D;
-	C->F;
-	C->G;
+    A->B;
+    A->C;
+    C->D;
+    C->F;
+    C->G;
 }
 ```
